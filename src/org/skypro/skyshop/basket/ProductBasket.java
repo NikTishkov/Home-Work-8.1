@@ -23,12 +23,16 @@ public class ProductBasket {
         productCount++;
     }
 
-    public int getTotalCost() {
-        int total = 0;
-        for (int i = 0; i < productCount; i++) {
-            total += products[i].getPriceProduct();
+    public boolean containsProduct(String productName) {
+        if (productName == null || productName.trim().isEmpty()) {
+            return false;
         }
-        return total;
+        for (int i = 0; i < productCount; i++) {
+            if (products[i].getNameProduct().equalsIgnoreCase(productName.trim())) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void printBasketContents() {
@@ -43,24 +47,21 @@ public class ProductBasket {
         System.out.println("Итого: " + getTotalCost());
     }
 
-    public boolean containsProduct(String productName) {
-        if (productName == null || productName.trim().isEmpty()) {
-            return false;
-        }
-        for (int i = 0; i < productCount; i++) {
-            if (products[i].getNameProduct().equalsIgnoreCase(productName.trim())) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     public void clearBasket() {
         for (int i = 0; i < products.length; i++) {
             products[i] = null;
         }
         productCount = 0;
     }
+
+    public int getTotalCost() {
+        int total = 0;
+        for (int i = 0; i < productCount; i++) {
+            total += products[i].getPriceProduct();
+        }
+        return total;
+    }
+
     public int getProductCount() {
         return productCount;
     }
