@@ -7,12 +7,12 @@ public class App {
     public static void main(String[] args) {
         ProductBasket basket = new ProductBasket();
 
-        Product apple = new Product("Яблоко", 230);
-        Product bread = new Product("Хлеб", 56);
-        Product milk = new Product("Молоко", 125);
-        Product cheese = new Product("Сыр", 1280);
-        Product butter = new Product("Масло", 119);
-        Product banana = new Product("Банан", 350);
+        Product apple = new SimpleProduct("Яблоко", 89);
+        Product bread = new SimpleProduct("Хлеб", 56);
+        Product milk = new SimpleProduct("Молоко", 125);
+        Product cheese = new DiscountedProduct("Сыр", 195, 60);
+        Product butter = new FixPriceProduct("Масло");
+        Product banana = new SimpleProduct("Банан",239);
 
         System.out.println("Task 1. Добавление продуктов в корзину:");
         basket.addProduct(apple);
