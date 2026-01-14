@@ -2,16 +2,18 @@ package org.skypro.skyshop;
 
 import org.skypro.skyshop.product.Product;
 
-public class FixPriceProduct extends Product {
+public abstract class FixPriceProduct extends Product {
     private static final int FIXED_PRICE = 350;
 
     public FixPriceProduct(String nameProduct) {
         super(nameProduct);
     }
+
     @Override
     public boolean isSpecial() {
         return true;
     }
+
     @Override
     public double getPriceProduct() {
         return FIXED_PRICE;
