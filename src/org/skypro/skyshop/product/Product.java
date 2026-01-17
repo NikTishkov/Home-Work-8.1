@@ -34,4 +34,9 @@ public abstract class Product implements Searchable {
     public String getContentType() {
         return "PRODUCT";
     }
+
+    @Override
+    public String getName() {
+        return "";
+    }
 }

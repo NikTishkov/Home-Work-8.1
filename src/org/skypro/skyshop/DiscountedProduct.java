@@ -2,7 +2,7 @@ package org.skypro.skyshop;
 
 import org.skypro.skyshop.product.Product;
 
-public abstract class DiscountedProduct extends Product {
+public class DiscountedProduct extends Product {
     private double basicPrice;
     private int discount;
 
