@@ -7,8 +7,6 @@ import java.util.Arrays;
 
 public class App {
     public static void main(String[] args) {
-        ProductBasket basket = new ProductBasket();
-
         System.out.println("Test version");
         SearchEngine searchEngine = new SearchEngine(10);
         //Обычные продукты
