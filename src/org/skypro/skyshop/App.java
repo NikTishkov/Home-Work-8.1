@@ -10,74 +10,15 @@ public class App {
         System.out.println("Test version");
         SearchEngine searchEngine = new SearchEngine(10);
         //Обычные продукты
-        searchEngine.add(new SimpleProduct("Кукуруза", 230) {
-            @Override
-            public String getName() {
-                return "";
-            }
-
-            @Override
-            public String getStringRepresentation() {
-                return super.getStringRepresentation();
-            }
-        });
-        searchEngine.add(new SimpleProduct("Варенье", 175) {
-            @Override
-            public String getName() {
-                return "";
-            }
-
-            @Override
-            public String getStringRepresentation() {
-                return super.getStringRepresentation();
-            }
-        });
-        searchEngine.add(new SimpleProduct("Шоколад", 365) {
-            @Override
-            public String getName() {
-                return "";
-            }
-
-            @Override
-            public String getStringRepresentation() {
-                return super.getStringRepresentation();
-            }
-        });
-        searchEngine.add(new SimpleProduct("Помидоры ташкент", 345) {
-            @Override
-            public String getName() {
-                return "";
-            }
-
-            @Override
-            public String getStringRepresentation() {
-                return super.getStringRepresentation();
-            }
-        });
+        searchEngine.add(new SimpleProduct("Кукуруза", 245));
+        searchEngine.add(new SimpleProduct("Варенье", 175));
+        searchEngine.add(new SimpleProduct("Шоколад", 365));
+        searchEngine.add(new SimpleProduct("Помидоры ташкент", 345));
         //Прдукты со скидкой
-        searchEngine.add(new DiscountedProduct("Сироп кофейный", 820, 20) {
-            @Override
-            public String getName() {
-                return "";
-            }
-
-            @Override
-            public String getStringRepresentation() {
-                return super.getStringRepresentation();
-            }
-        });
+        searchEngine.add(new DiscountedProduct("Сироп кофейный", 820, 20));
         //Продукты с фикс ценой
-        searchEngine.add(new FixPriceProduct("Бумага туалетная") {
-            @Override
-            public String getName() {
-                return "";
-            }
+        searchEngine.add(new FixPriceProduct("Бумага туалетная"));
 
-            @Override
-            public String getStringRepresentation() {
-                return super.getStringRepresentation();
-            }
-        });
         System.out.println("Добавлено товаров: " + searchEngine.getCurrentSize());
         System.out.println("Article add");
         //Статьи

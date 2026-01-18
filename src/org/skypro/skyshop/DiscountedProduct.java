@@ -11,6 +11,10 @@ public class DiscountedProduct extends Product {
         this.basicPrice = basicPrice;
         this.discount = Math.max(0, Math.min(100, discount));
     }
+    @Override
+    public String getContentType() {
+        return "DISCOUNTED_PRODUCT";
+    }
 
     @Override
     public double getPriceProduct() {
@@ -25,5 +29,14 @@ public class DiscountedProduct extends Product {
     @Override
     public String toString() {
         return getNameProduct() + ": " + getPriceProduct() + " руб. С учетом скидки в " + discount + "%.";
+    }
+    @Override
+    public String getSearchTerm() {
+        return getNameProduct();
+    }
+
+    @Override
+    public String getName() {
+        return "";
     }
 }
